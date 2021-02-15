@@ -1,4 +1,14 @@
+substitutions:
+  _DOCKER_COMPOSE_VERSION: 1.28.2
 steps:
-- id: "Teste Unitário"
-- name: 'gcr.io/cloud-builders/golang-project'
-  args: ['go', 'test']
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+  - 'build'
+  - '--build-arg'
+  - 'DOCKER_COMPOSE_VERSION=${_DOCKER_COMPOSE_VERSION}'
+  - '-t'
+  - 'gcr.io/$PROJECT_ID/desafioci:latest'
+  - '-t'
+  - 'gcr.io/$PROJECT_ID/desafioci:${_DOCKER_COMPOSE_VERSION}'
+  - '.'
+
