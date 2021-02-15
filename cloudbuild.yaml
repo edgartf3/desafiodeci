@@ -1,4 +1,4 @@
 steps:
 - id: "Teste Unitário"
-- name: 'gcr.io/cloud-builders/go:latest'
+- name: 'gcr.io/cloud-builders/golang-project'
   args: ['test']
