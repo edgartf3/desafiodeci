@@ -1,4 +1,14 @@
+substitutions:
+  _DOCKER_COMPOSE_VERSION: 1.28.2
 steps:
-- id: "Executando Teste Unitário"
-  name: 'gcr.io/$PROJECT_ID/docker-compose:1.28.2'
-  args: ['-f', 'docker-compose.cloudbuild.yaml', 'up', '-d']
+- id: "Gerando Imagem"
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+  - 'build'
+  - '--build-arg'
+  - 'DOCKER_COMPOSE_VERSION=${_DOCKER_COMPOSE_VERSION}'
+  - '-t'
+  - 'gcr.io/$PROJECT_ID/desafioci:latest'
+  - '-t'
+  - 'gcr.io/$PROJECT_ID/desafioci:${_DOCKER_COMPOSE_VERSION}'
+  - '.'
