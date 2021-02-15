@@ -12,3 +12,6 @@ steps:
   - 'gcr.io/$PROJECT_ID/desafioci:${_DOCKER_COMPOSE_VERSION}'
   - '.'
 
+images:
+- 'gcr.io/$PROJECT_ID/desafioci:latest'
+- 'gcr.io/$PROJECT_ID/desafioci:${_DOCKER_COMPOSE_VERSION}'
