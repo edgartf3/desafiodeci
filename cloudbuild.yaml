@@ -1,0 +1,4 @@
+steps:
+- id: "Executando Teste Unitário"
+  name: 'gcr.io/$PROJECT_ID/docker-compose:1.28.2'
+  args: ['-f', 'docker-compose.cloudbuild.yaml', 'up', '-d']
