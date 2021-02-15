@@ -1,15 +1,5 @@
-substitutions:
-  _DOCKER_COMPOSE_VERSION: 1.28.2
-  
 steps:
-- id: "Gerando Imagem"
-- name: 'gcr.io/cloud-builders/docker'
+- id: "Teste Unitário"
+- name: 'gcr.io/cloud-builders/go'
   args:
-  - 'build'
-  - '--build-arg'
-  - 'DOCKER_COMPOSE_VERSION=${_DOCKER_COMPOSE_VERSION}'
-  - '-t'
-  - 'gcr.io/$PROJECT_ID/desafioci:latest'
-  - '-t'
-  - 'gcr.io/$PROJECT_ID/desafioci:${_DOCKER_COMPOSE_VERSION}'
-  - '.'
+  - 'test'
