@@ -1,5 +1,6 @@
 substitutions:
   _DOCKER_COMPOSE_VERSION: 1.28.2
+  
 steps:
 - id: "Gerando Imagem"
 - name: 'gcr.io/cloud-builders/docker'
