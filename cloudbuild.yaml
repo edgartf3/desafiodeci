@@ -1,6 +1,10 @@
 substitutions:
   _DOCKER_COMPOSE_VERSION: 1.28.2
 steps:
+- id: 'go help'
+  name: 'gcr.io/cloud-builders/golang-project'
+  args: ['help']
+
 - id: "Gerando Imagen docker"
   name: 'gcr.io/cloud-builders/docker'
   args:
