@@ -1,11 +1,9 @@
 substitutions:
   _DOCKER_COMPOSE_VERSION: 1.28.2
 steps:
-- id: 'go test'
-- name: 'gcr.io/cloud-builders/go'
-  args: ['install', '.']
-  env: ['PROJECT_ROOT=hello']
-  dir: '.'
+# - id: 'go test'
+#   name: 'gcr.io/cloud-builders/go'
+#   args: ['test']
 
 - id: "Gerando Imagen Docker"
   name: 'gcr.io/cloud-builders/docker'
