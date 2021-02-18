@@ -1,7 +1,8 @@
 substitutions:
   _DOCKER_COMPOSE_VERSION: 1.28.2
 steps:
-- name: 'gcr.io/cloud-builders/docker'
+- id: "Gerando Imagen docker"
+  name: 'gcr.io/cloud-builders/docker'
   args:
   - 'build'
   - '--build-arg'
@@ -13,5 +14,5 @@ steps:
   - '.'
 
 images:
-- 'gcr.io/$PROJECT_ID/desafioci:latest'
-- 'gcr.io/$PROJECT_ID/desafioci:${_DOCKER_COMPOSE_VERSION}'
+  - 'gcr.io/$PROJECT_ID/desafioci:latest'
+  - 'gcr.io/$PROJECT_ID/desafioci:${_DOCKER_COMPOSE_VERSION}'
