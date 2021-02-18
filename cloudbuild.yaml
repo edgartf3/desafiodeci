@@ -5,7 +5,7 @@ steps:
 #   name: 'gcr.io/cloud-builders/golang-project'
 #   args: ['GOPATH=$PWD', 'test']
 
-- id: "Gerando Imagen docker"
+- id: "Gerando Imagen Docker"
   name: 'gcr.io/cloud-builders/docker'
   args:
   - 'build'
