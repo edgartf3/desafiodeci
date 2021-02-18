@@ -2,8 +2,8 @@ substitutions:
   _DOCKER_COMPOSE_VERSION: 1.28.2
 steps:
 # - id: 'go test'
-#   name: 'gcr.io/cloud-builders/golang-project'
-#   args: ['GOPATH=$PWD', 'test']
+#   name: 'gcr.io/cloud-builders/go'
+#   args: ['test']
 
 - id: "Gerando Imagen Docker"
   name: 'gcr.io/cloud-builders/docker'
