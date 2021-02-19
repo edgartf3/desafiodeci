@@ -1,7 +1,7 @@
 substitutions:
   _DOCKER_COMPOSE_VERSION: 1.28.2
 steps:
-- id: 'go Teste'
+- id: 'go TEST'
   name: 'gcr.io/cloud-builders/go'
   args: ['test']
   env:
